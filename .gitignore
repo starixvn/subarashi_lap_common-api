@@ -1,0 +1,45 @@
+# system files
+.DS_Store
+
+# IDE files
+.vs
+.vscode
+
+# front-end file build
+**/wwwroot/**
+
+# node_modules
+**/node_modules/**
+
+# build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# publish folder
+[Pp]ublish/
+
+# logs folder
+[Ll]og[Ff]iles/
+
+# Exclude old project files
+Fanex.DepositSettingAPI.sln
+Fanex.InternalSettingAPI.sln
+src/Fanex.DepositSettingAPI.*/**
+test/Fanex.DepositSettingAPI.*/**
+
+# Exclude old project files
+Fanex.DepositSettingAPI.sln
+Fanex.InternalSettingAPI.sln
+src/Fanex.DepositSettingAPI.*/**
+test/Fanex.DepositSettingAPI.*/**

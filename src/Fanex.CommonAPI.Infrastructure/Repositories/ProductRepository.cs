@@ -14,7 +14,10 @@ public class ProductRepository(IDbFactory dbFactory) : IProductRepository
 {
     public async Task<IEnumerable<Product>> GetProductAccesssAsync(int licenseeId)
     {
-        var allowedProducts = new List<Product> { new Product { IsOfferedSingleWallet = true, ProductCode = ProductCode.SB } };
+        var allowedProducts = new List<Product> {
+            new() { IsOfferedSingleWallet = true, ProductCode = ProductCode.SB },
+            new() { IsOfferedSingleWallet = true, ProductCode = ProductCode.Parlay }
+        };
 
         const string spName = "Lrf_LicenseeProduct3rdSel";
 

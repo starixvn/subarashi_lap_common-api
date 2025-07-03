@@ -47,7 +47,7 @@ public class ProductResourceEndpoints : IEndpoints
             {
                 ErrorCode = error.Code,
                 ErrorMessage = error.Message,
-                Result = new Dictionary<string, string>()
+                Result = string.Empty
             })
         );
     }

@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using System.Globalization;
 using System.Resources;
-using Fanex.CommonAPI.Application.Services;
 
 namespace Fanex.CommonAPI.Presentation.Services;
 

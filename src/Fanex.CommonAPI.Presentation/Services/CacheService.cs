@@ -1,4 +1,3 @@
-using System;
 using Fanex.CommonAPI.Application.Services;
 
 namespace Fanex.CommonAPI.Presentation.Services;

@@ -2,13 +2,9 @@
 
 using Constants;
 using Domain.Entities;
-using Domain.Params;
 using Domain.Repositories;
-using Utils;
 using System.Collections.Generic;
-using Fanex.Data;
 using Fanex.CommonAPI.Application.Constants;
-using Fanex.CommonAPI.Application.Helper;
 
 public class ProductRepository(IDbFactory dbFactory) : IProductRepository
 {

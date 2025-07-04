@@ -250,6 +250,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GPI Lottery.
+        /// </summary>
+        internal static string ProductGPILT {
+            get {
+                return ResourceManager.GetString("ProductGPILT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GPI.
         /// </summary>
         internal static string ProductGPIRNG {

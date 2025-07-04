@@ -1,5 +1,4 @@
 using MediatR;
-using System.Collections.Generic;
 using Fanex.CommonAPI.Domain.Results;
 
 namespace Fanex.CommonAPI.Application.Queries;

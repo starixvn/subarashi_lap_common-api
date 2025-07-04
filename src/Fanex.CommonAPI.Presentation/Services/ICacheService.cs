@@ -1,5 +1,3 @@
-using System;
-
 namespace Fanex.CommonAPI.Presentation.Services;
 
 public interface ICacheService

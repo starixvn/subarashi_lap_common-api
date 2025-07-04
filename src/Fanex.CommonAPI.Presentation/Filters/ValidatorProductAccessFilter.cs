@@ -1,7 +1,6 @@
 namespace Fanex.CommonAPI.Presentation.Filters;
 
 using Microsoft.AspNetCore.Http;
-using Utils;
 
 public class ValidatorProductAccessFilter : IEndpointFilter
 {

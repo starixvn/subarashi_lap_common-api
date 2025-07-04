@@ -1,4 +1,3 @@
-using Azure.Core;
 using Fanex.CommonAPI.Application.Constants;
 using Fanex.CommonAPI.Application.Helper;
 using Fanex.CommonAPI.Application.Queries;
@@ -6,10 +5,7 @@ using Fanex.CommonAPI.Application.Resources;
 using Fanex.CommonAPI.Application.Services;
 using Fanex.CommonAPI.Domain.Results;
 using Fanex.Logging;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using System.Globalization;
-using System.Resources;
-using VaultSharp.V1.SecretsEngines.TOTP;
 
 namespace Fanex.CommonAPI.Application.Handlers;
 

@@ -10,8 +10,8 @@
 
 namespace Fanex.CommonAPI.Application.Resources {
     using System;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace Fanex.CommonAPI.Application.Resources {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ViewResources_ProductById {
-
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal ViewResources_ProductById() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +59,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Sportsbook.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_0", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AG Casino.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_10", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Playtech.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_100", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Playtech Live.
         /// </summary>
@@ -95,7 +95,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_101", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ASKMESLOT.
         /// </summary>
@@ -104,7 +104,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_103", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Funky Games.
         /// </summary>
@@ -113,7 +113,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_104", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Microgaming Live.
         /// </summary>
@@ -122,7 +122,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_107", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to RichGaming.
         /// </summary>
@@ -131,7 +131,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_108", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ClotPlay.
         /// </summary>
@@ -140,7 +140,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_109", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AI Gaming.
         /// </summary>
@@ -149,7 +149,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_110", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Macau.
         /// </summary>
@@ -158,7 +158,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_12", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Cock Fighting.
         /// </summary>
@@ -167,7 +167,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_19", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Number Game.
         /// </summary>
@@ -176,7 +176,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_2", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Allbet.
         /// </summary>
@@ -185,7 +185,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_21", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Macau Games.
         /// </summary>
@@ -194,7 +194,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_22", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Number Game 2.
         /// </summary>
@@ -203,7 +203,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_23", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Cash Out.
         /// </summary>
@@ -212,7 +212,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_25", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Virtual Sports 2.
         /// </summary>
@@ -221,7 +221,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_27", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Lottery.
         /// </summary>
@@ -230,7 +230,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_28", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to BA.
         /// </summary>
@@ -239,7 +239,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_3", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Bullfighting.
         /// </summary>
@@ -248,7 +248,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_30", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Exchange.
         /// </summary>
@@ -257,7 +257,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_31", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Pragmatic.
         /// </summary>
@@ -266,7 +266,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_32", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Arcadia Gaming.
         /// </summary>
@@ -275,7 +275,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_34", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Peer to Peer.
         /// </summary>
@@ -284,7 +284,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_35", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SG.
         /// </summary>
@@ -293,7 +293,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_36", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Saba Promotion.
         /// </summary>
@@ -302,7 +302,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_37", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Virtual Games.
         /// </summary>
@@ -311,7 +311,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_38", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SA Gaming.
         /// </summary>
@@ -320,7 +320,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_39", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Saba.club.
         /// </summary>
@@ -329,7 +329,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_42", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Togel 4D.
         /// </summary>
@@ -338,7 +338,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_43", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AE Sexy.
         /// </summary>
@@ -347,7 +347,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_45", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to GPI.
         /// </summary>
@@ -356,7 +356,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_48", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Virtual Sports 3 (Old).
         /// </summary>
@@ -365,7 +365,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_49", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Virtual Sports.
         /// </summary>
@@ -374,7 +374,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_5", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WM.
         /// </summary>
@@ -383,7 +383,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_51", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PG Soft.
         /// </summary>
@@ -392,7 +392,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_55", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Joker.
         /// </summary>
@@ -401,7 +401,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_56", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to BG.
         /// </summary>
@@ -410,7 +410,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_57", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Saba Casino.
         /// </summary>
@@ -419,7 +419,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_6", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MaxGame.
         /// </summary>
@@ -428,7 +428,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_60", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Habanero.
         /// </summary>
@@ -437,7 +437,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_61", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to CG.
         /// </summary>
@@ -446,7 +446,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_62", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Sports Lottery.
         /// </summary>
@@ -455,7 +455,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_63", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Vgaming.
         /// </summary>
@@ -464,7 +464,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_66", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AdvantPlay.
         /// </summary>
@@ -473,7 +473,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_67", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AdvantPlay Mini.
         /// </summary>
@@ -482,7 +482,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_68", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Bingo.
         /// </summary>
@@ -491,7 +491,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_7", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FGG.
         /// </summary>
@@ -500,7 +500,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_70", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SEAL Entertainment.
         /// </summary>
@@ -509,7 +509,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_72", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MG-RNG.
         /// </summary>
@@ -518,7 +518,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_73", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Jili.
         /// </summary>
@@ -527,7 +527,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_75", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to YeeBet.
         /// </summary>
@@ -536,7 +536,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_76", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Virtual Sports 3.
         /// </summary>
@@ -545,7 +545,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_77", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to UU SLOTS.
         /// </summary>
@@ -554,7 +554,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_78", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Live22.
         /// </summary>
@@ -563,7 +563,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_79", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to RNG Keno.
         /// </summary>
@@ -572,7 +572,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_8", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to WE Live Casino.
         /// </summary>
@@ -581,7 +581,16 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_80", resourceCulture);
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GPI Lottery.
+        /// </summary>
+        internal static string Product_84 {
+            get {
+                return ResourceManager.GetString("Product_84", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to Nextspin.
         /// </summary>
@@ -590,7 +599,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_85", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FastSpin.
         /// </summary>
@@ -599,7 +608,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_87", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FA CHAI.
         /// </summary>
@@ -608,7 +617,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_89", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Playtech Casino.
         /// </summary>
@@ -617,7 +626,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_9", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to GPI Live Casino.
         /// </summary>
@@ -626,7 +635,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_90", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PLAYSTAR.
         /// </summary>
@@ -635,7 +644,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_91", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to HOTDOG.
         /// </summary>
@@ -644,7 +653,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_95", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ON Casino.
         /// </summary>
@@ -653,7 +662,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_96", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to W Casino.
         /// </summary>
@@ -662,7 +671,7 @@ namespace Fanex.CommonAPI.Application.Resources {
                 return ResourceManager.GetString("Product_98", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Others.
         /// </summary>

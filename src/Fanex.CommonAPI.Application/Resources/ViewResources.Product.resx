@@ -181,6 +181,9 @@
   <data name="ProductGPILC" xml:space="preserve">
     <value>GPI Live Casino</value>
   </data>
+  <data name="ProductGPILT" xml:space="preserve">
+    <value>GPI Lottery</value>
+  </data>
   <data name="ProductGPIRNG" xml:space="preserve">
     <value>GPI</value>
   </data>

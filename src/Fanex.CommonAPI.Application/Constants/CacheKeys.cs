@@ -8,5 +8,7 @@ public static class CacheKeys
 
     public static Func<GetProductResourceQuery, string> ProductResources => query => $"ProductResources_{query.Language}_{query.ProductCode}";
 
+    public static Func<GetProductResourceByIdQuery, string> ProductResourcesById => query => $"ProductResourcesById_{query.Language}_{query.ProductId}";
+
     public const string ProductSettings = "ProductSettings";
 }

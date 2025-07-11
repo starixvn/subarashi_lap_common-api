@@ -38,12 +38,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ViewResources.Product.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\ViewResources.ProductById.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ViewResources.ProductById.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Resources\ViewResources.Product.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ViewResources.Product.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ViewResources.ProductById.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ViewResources.ProductById.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

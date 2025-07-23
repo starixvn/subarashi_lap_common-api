@@ -17,7 +17,7 @@ public class ProductSettingEndpoints : IEndpoints
     public void Map(IEndpointRouteBuilder app)
     {
         var group = app.MapGroup(this);
-        group.MapGet(GetProductSettings, "");
+        group.MapGet(GetProductSettings, "/");
     }
 
     [Produces("application/json")]

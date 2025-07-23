@@ -17,7 +17,7 @@ public class ProductResourceEndpoints : IEndpoints
     public void Map(IEndpointRouteBuilder app)
     {
         var group = app.MapGroup(this);
-        group.MapGet(GetProductResources, "");
+        group.MapGet(GetProductResources, "/");
         group.MapGet(GetProductResourceById, "/{productId:int}");
     }
 

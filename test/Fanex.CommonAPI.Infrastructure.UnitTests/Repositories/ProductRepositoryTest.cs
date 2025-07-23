@@ -34,8 +34,8 @@ public class ProductRepositoryTest(DbFactoryFixture dbFactoryFixture) : Reposito
         // Arrange
         var licenseeId = Fixture.Create<int>();
         var expectedProducts = Fixture.CreateMany<Product>(3).ToList();
-        var defaultProduct = new Product { IsOfferedSingleWallet = true, ProductCode = ProductCode.SB };
-        expectedProducts.Insert(0, defaultProduct);
+        expectedProducts.Insert(0, new Product { IsOfferedSingleWallet = true, ProductCode = ProductCode.SB });
+        expectedProducts.Insert(1, new Product { IsOfferedSingleWallet = true, ProductCode = ProductCode.Parlay });
 
         var dataTable = new DataTable();
         dataTable.Columns.Add("ProductID", typeof(int));
@@ -44,7 +44,7 @@ public class ProductRepositoryTest(DbFactoryFixture dbFactoryFixture) : Reposito
         dataTable.Columns.Add("winloss", typeof(bool));
         dataTable.Columns.Add("IsOfferedSingleWallet", typeof(bool));
 
-        foreach (var product in expectedProducts.Skip(1))
+        foreach (var product in expectedProducts.Skip(2))
         {
             dataTable.Rows.Add(
                 product.ProductID,

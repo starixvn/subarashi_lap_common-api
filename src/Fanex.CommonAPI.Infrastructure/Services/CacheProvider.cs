@@ -35,12 +35,9 @@ public class CacheProvider(IMemoryCache cache) : ICacheProvider
 
     public T GetOrCreateFromCache<T>(string key, T value, TimeSpan? cacheTime)
     {
-        if (!cache.TryGetValue(key, out T data))
+        if (!cache.TryGetValue(key, out T data) && data is not null)
         {
-            if (data is not null)
-            {
-                SetValueToCache(key, value, cacheTime);
-            }
+            SetValueToCache(key, value, cacheTime);
         }
 
         return data;

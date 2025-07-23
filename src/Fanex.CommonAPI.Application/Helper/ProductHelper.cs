@@ -1,4 +1,5 @@
 ﻿using Fanex.CommonAPI.Application.Resources;
+using System.Collections.Immutable;
 using System.Globalization;
 
 namespace Fanex.CommonAPI.Application.Helper
@@ -12,7 +13,7 @@ namespace Fanex.CommonAPI.Application.Helper
             216, 230, 146, 229, 138, 148, 145, 144, 143, 130, 131, 139, 124, 129, 123, 136, 121, 122, 132
         ];
 
-        public static readonly IDictionary<string, string> ProductNameMap =
+        public static readonly ImmutableDictionary<string, string> ProductNameMap =
             new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
             {
                 { "VS180", nameof(ViewResources_Product.VirtualSoccer) },
@@ -31,7 +32,7 @@ namespace Fanex.CommonAPI.Application.Helper
                 { "VS2195", nameof(ViewResources_Product.VirtualSoccerEnglishPremier) },
                 { "VS2196", nameof(ViewResources_Product.VirtualSoccerChampionsCup) },
                 { "VS2197", nameof(ViewResources_Product.VirtualSoccerEuroCup) }
-            };
+            }.ToImmutableDictionary();
 
         public static string GetProductName(string productCode, CultureInfo culture)
         {

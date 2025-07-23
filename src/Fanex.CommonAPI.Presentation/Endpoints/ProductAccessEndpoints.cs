@@ -23,7 +23,7 @@ public class ProductAccessEndpoints : IEndpoints
         var group = app.MapGroup(this);
 
         group
-            .MapGet(GetProductAccesss, "")
+            .MapGet(GetProductAccesss, "/")
             .AddEndpointFilter<ValidatorProductAccessFilter>();
     }
 

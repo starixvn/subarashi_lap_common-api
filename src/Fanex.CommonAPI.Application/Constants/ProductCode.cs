@@ -1,6 +1,6 @@
 ﻿namespace Fanex.CommonAPI.Application.Constants
 {
-    public class ProductCode
+    public static class ProductCode
     {
         public const string SB = "SB";
 

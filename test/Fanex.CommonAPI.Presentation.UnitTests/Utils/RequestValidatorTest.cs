@@ -1,130 +1,101 @@
-﻿namespace Fanex.CommonAPI.Presentation.UnitTests.Utils;
-
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using AutoFixture;
+using AutoFixture.Xunit2;
+using Fanex.CommonAPI.Presentation.Utils;
 using FluentAssertions;
-using Presentation.Utils;
+using Xunit;
+
+namespace Fanex.CommonAPI.Presentation.UnitTests.Utils;
 
 public class RequestValidatorTest
 {
-    private readonly Fixture _fixture = new();
+    private readonly IFixture _fixture;
 
-    [Fact]
-    public void IsValidRequest_WithValidRequestObject_ReturnsTrue()
+    public RequestValidatorTest()
     {
-        // Arrange
-        var validRequest = _fixture.Build<RequestObject>()
-            .With(x => x.Property1, "valid_value1")
-            .With(x => x.Property2, "valid_value2")
-            .Create();
+        _fixture = new Fixture();
+    }
 
-        // Action
-        var (isValid, _) = RequestValidator.IsValidRequest(validRequest);
+    private class TestRequest
+    {
+        [Required]
+        public string RequiredField { get; set; }
 
-        // Assert
-        isValid.Should().BeTrue();
+        [Range(1, 100)]
+        public int RangeField { get; set; }
+
+        [EmailAddress]
+        public string EmailField { get; set; }
     }
 
     [Fact]
-    public void IsValidRequest_WithInvalidRequestObject_ReturnsFalse()
+    public void IsValidRequest_ShouldReturnTrueForValidRequest()
     {
         // Arrange
-        var invalidRequest = new RequestObject
-        {
-            Property1 = "valid_value1",
-            Property2 = null!
-        };
+        var request = _fixture.Build<TestRequest>()
+            .With(x => x.RequiredField, "test")
+            .With(x => x.RangeField, 50)
+            .With(x => x.EmailField, "test@example.com")
+            .Create();
 
-        // Action
-        var (isValid, _) = RequestValidator.IsValidRequest(invalidRequest);
+        // Act
+        var (isValid, results) = RequestValidator.IsValidRequest(request);
+
+        // Assert
+        isValid.Should().BeTrue();
+        results.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void IsValidRequest_ShouldReturnFalseForInvalidRequest()
+    {
+        // Arrange
+        var request = _fixture.Build<TestRequest>()
+            .With(x => x.RequiredField, (string)null)
+            .With(x => x.RangeField, 101)
+            .With(x => x.EmailField, "invalid-email")
+            .Create();
+
+        // Act
+        var (isValid, results) = RequestValidator.IsValidRequest(request);
 
         // Assert
         isValid.Should().BeFalse();
+        results.Should().HaveCount(3);
     }
 
     [Fact]
-    public void IsValidRequest_WithInvalidRequestObject_ReturnsValidationResults()
+    public void GetInvalidParamList_ShouldReturnCommaSeparatedMemberNames()
     {
         // Arrange
-        var invalidRequest = new RequestObject
+        var validationResults = new List<ValidationResult>
         {
-            Property1 = "valid_value1",
-            Property2 = null!
+            new ValidationResult("Required field error", new[] { "RequiredField" }),
+            new ValidationResult("Range field error", new[] { "RangeField" }),
+            new ValidationResult("Email field error", new[] { "EmailField" })
         };
 
-        // Action
-        var (_, validationResults) = RequestValidator.IsValidRequest(invalidRequest);
+        // Act
+        var result = RequestValidator.GetInvalidParamList(validationResults);
 
         // Assert
-        validationResults.Should().NotBeEmpty();
-        validationResults.SelectMany(x => x.MemberNames).Should().Contain("Property2");
+        result.Should().Be("RequiredField, RangeField, EmailField");
     }
 
     [Fact]
-    public void IsValidRequest_WithValidRequestObject_ReturnsEmptyValidationResults()
+    public void GetInvalidParamList_ShouldHandleMultipleMemberNamesPerValidationResult()
     {
         // Arrange
-        var validRequest = new RequestObject
+        var validationResults = new List<ValidationResult>
         {
-            Property1 = "valid_value1",
-            Property2 = "valid_value2"
+            new ValidationResult("Multiple fields error", new[] { "Field1", "Field2" }),
+            new ValidationResult("Single field error", new[] { "Field3" })
         };
 
-        // Action
-        var (_, validationResults) = RequestValidator.IsValidRequest(validRequest);
+        // Act
+        var result = RequestValidator.GetInvalidParamList(validationResults);
 
         // Assert
-        validationResults.Should().BeEmpty();
-    }
-
-    [Fact]
-    public void IsValidRequest_WithNullInput_ThrowError()
-    {
-        // Arrange
-        object nullRequest = null!;
-
-        // Action
-        Action action = () => RequestValidator.IsValidRequest(nullRequest);
-
-        // Assert
-        action.Should().Throw<Exception>();
-    }
-
-    [Fact]
-    public void IsValidRequest_WithNestedObjects_ValidatesAllProperties()
-    {
-        // Arrange
-        var nestedRequest = new RequestObject
-        {
-            Property1 = "valid_value1",
-            Property2 = "valid_value2",
-            NestedObject = new NestedObject
-            {
-                NestedProperty = "valid_nested_value"
-            }
-        };
-
-        // Action
-        var (isValid, _) = RequestValidator.IsValidRequest(nestedRequest);
-
-        // Assert
-        isValid.Should().BeTrue();
-    }
-
-    public class NestedObject
-    {
-        [Required]
-        public string NestedProperty { get; set; }
-    }
-
-    public class RequestObject
-    {
-        [Required]
-        public string Property1 { get; set; }
-
-        [Required]
-        public string Property2 { get; set; }
-
-        public NestedObject NestedObject { get; set; }
+        result.Should().Be("Field1, Field2, Field3");
     }
 }

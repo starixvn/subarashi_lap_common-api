@@ -115,6 +115,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ODIN GAMING.
+        /// </summary>
+        internal static string Product_105 {
+            get {
+                return ResourceManager.GetString("Product_105", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Microgaming Live.
         /// </summary>
         internal static string Product_107 {

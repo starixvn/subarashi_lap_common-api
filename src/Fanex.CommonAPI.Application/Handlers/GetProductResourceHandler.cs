@@ -1,4 +1,3 @@
-using Azure.Core;
 using Fanex.CommonAPI.Application.Constants;
 using Fanex.CommonAPI.Application.Helper;
 using Fanex.CommonAPI.Application.Queries;
@@ -6,14 +5,11 @@ using Fanex.CommonAPI.Application.Resources;
 using Fanex.CommonAPI.Application.Services;
 using Fanex.CommonAPI.Domain.Results;
 using Fanex.Logging;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using System.Globalization;
-using System.Resources;
-using VaultSharp.V1.SecretsEngines.TOTP;
 
 namespace Fanex.CommonAPI.Application.Handlers;
 
-public class GetProductResourceHandler : BaseHandler<GetProductResourceQuery, ServiceResult<Dictionary<string, string>>>
+public class GetProductResourceHandler : BaseHandler<GetProductResourceQuery, ServiceResult<object>>
 {
     private readonly ICacheProvider _cacheProvider;
 
@@ -24,7 +20,7 @@ public class GetProductResourceHandler : BaseHandler<GetProductResourceQuery, Se
         _cacheProvider = cacheProvider;
     }
 
-    protected override async Task<ServiceResult<Dictionary<string, string>>> DoWork(GetProductResourceQuery request, CancellationToken cancellationToken)
+    protected override async Task<ServiceResult<object>> DoWork(GetProductResourceQuery request, CancellationToken cancellationToken)
     {
         var cacheKey = CacheKeys.ProductResources(request);
 
@@ -33,10 +29,10 @@ public class GetProductResourceHandler : BaseHandler<GetProductResourceQuery, Se
             () => GetResult(request.Language, request.ProductCode),
             TimeSpan.FromDays(1));
 
-        return ServiceResult<Dictionary<string, string>>.Success(result);
+        return ServiceResult<object>.Success(result);
     }
 
-    private Dictionary<string, string> GetResult(string language, string productCode)
+    private object GetResult(string language, string productCode)
     {
         var culture = new CultureInfo(language);
 
@@ -45,7 +41,7 @@ public class GetProductResourceHandler : BaseHandler<GetProductResourceQuery, Se
             var value = ViewResources_Product.ResourceManager.GetString(
                 GetResourceKeyByProductCode(productCode), culture) ?? string.Empty;
 
-            return new Dictionary<string, string> { { productCode, value } };
+            return value;
         }
 
         var resourceSet = ViewResources_Product.ResourceManager.GetResourceSet(culture, true, true);

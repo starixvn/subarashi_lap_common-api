@@ -141,6 +141,13 @@
   <data name="ProductBGG" xml:space="preserve">
     <value>BG</value>
   </data>
+  <data name="ProductBT" xml:space="preserve">
+    <value>Bet Trade</value>
+    <comment>#49196</comment>
+  </data>
+  <data name="ProductBTC" xml:space="preserve">
+    <value>Bitcoin</value>
+  </data>
   <data name="ProductBX" xml:space="preserve">
     <value>Exchange</value>
   </data>
@@ -174,6 +181,9 @@
   <data name="ProductGPILC" xml:space="preserve">
     <value>GPI Live Casino</value>
   </data>
+  <data name="ProductGPILT" xml:space="preserve">
+    <value>GPI Lottery</value>
+  </data>
   <data name="ProductGPIRNG" xml:space="preserve">
     <value>GPI</value>
   </data>
@@ -197,6 +207,10 @@
   </data>
   <data name="ProductL22" xml:space="preserve">
     <value>Live22</value>
+  </data>
+  <data name="ProductLC" xml:space="preserve">
+    <value>Live Casino</value>
+    <comment>117900</comment>
   </data>
   <data name="ProductLG" xml:space="preserve">
     <value>Virtual Sports 3</value>
@@ -234,6 +248,10 @@
   <data name="ProductPS" xml:space="preserve">
     <value>PLAYSTAR</value>
   </data>
+  <data name="ProductPTCS" xml:space="preserve">
+    <value>Playtech Casino</value>
+    <comment>14488, #49196</comment>
+  </data>
   <data name="ProductPTLC" xml:space="preserve">
     <value>Playtech Live</value>
   </data>
@@ -254,6 +272,9 @@
   </data>
   <data name="ProductSBVS" xml:space="preserve">
     <value>Saba Virtual Sports</value>
+  </data>
+  <data name="ProductSB_BA" xml:space="preserve">
+    <value>Sportsbook &amp; BA</value>
   </data>
   <data name="ProductSEA" xml:space="preserve">
     <value>SEAL Entertainment</value>
@@ -282,6 +303,10 @@
   </data>
   <data name="ProductVB" xml:space="preserve">
     <value>Macau Games</value>
+  </data>
+  <data name="ProductVG" xml:space="preserve">
+    <value>Macau</value>
+    <comment>#49196</comment>
   </data>
   <data name="ProductVGA" xml:space="preserve">
     <value>Vgaming</value>

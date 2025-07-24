@@ -1,13 +1,13 @@
+using Fanex.CommonAPI.Domain.Entities;
+using Fanex.CommonAPI.Presentation.DTOs.Interfaces;
+
 namespace Fanex.CommonAPI.Presentation.DTOs.Response;
 
-using Domain.Entities;
-using Interfaces;
-
-public class ProductAccessResponse : IResultResponse<IEnumerable<Product>>
+public class ProductSettingResponse : IResultResponse<ProductSetting>
 {
     public int ErrorCode { get; set; }
 
     public string ErrorMessage { get; set; }
 
-    public IEnumerable<Product> Result { get; set; }
+    public ProductSetting Result { get; set; }
 }

@@ -1,14 +1,7 @@
-ARG CI_REGISTRY_IMAGE
-
-FROM $CI_REGISTRY_IMAGE:builder AS deps
-
-RUN mkdir -p /src/packages
-
+# Stage build
 FROM hub.nexdev.net/base/dotnet/core/sdk:8.0-alpine AS builder
 
 ENV NUGET_PACKAGES=/src/packages
-
-COPY --from=deps $NUGET_PACKAGES/. $NUGET_PACKAGES/
 
 WORKDIR /src
 
@@ -35,18 +28,17 @@ RUN dotnet publish "Fanex.CommonAPI.WebApi/Fanex.CommonAPI.WebApi.csproj" -c Rel
     --use-current-runtime \
     --self-contained false
 
+# Runtime
 FROM hub.nexdev.net/base/dotnet/core/aspnet:8.0-alpine-25h1 AS final
 
 ENV DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false
 ENV ASPNETCORE_HTTP_PORTS=5000
 EXPOSE 5000
 
-# Dont run as root
 RUN adduser --disabled-password \
     --home /app \
     --gecos '' dotnetuser && chown -R dotnetuser /app && chown -R dotnetuser /tmp
 USER dotnetuser
-#
 
 WORKDIR /app
 

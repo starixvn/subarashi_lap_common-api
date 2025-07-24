@@ -36,6 +36,9 @@
   </ItemGroup>
 	
   <ItemGroup>
+    <None Update="App_Data\FunctionAllowedProduct.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="FanexSpName.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

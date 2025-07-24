@@ -1,17 +1,19 @@
 ﻿using Fanex.CommonAPI.Application.Resources;
-using Fanex.CommonAPI.Domain.Entities;
-using System;
-using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fanex.CommonAPI.Application.Helper
 {
     public static class ProductHelper
     {
-        public static readonly IDictionary<string, string> ProductNameMap =
+        public static int[] LiveReportNoDetailLinkSports =>
+        [
+            162, 251, 252, 253, 202, 203, 208, 209, 210, 211, 212, 220, 248, 165, 247, 245, 222, 223, 243,
+            200, 244, 232, 234, 238, 233, 239, 171, 167, 172, 174, 176, 237, 158, 159, 155, 156, 228, 227,
+            216, 230, 146, 229, 138, 148, 145, 144, 143, 130, 131, 139, 124, 129, 123, 136, 121, 122, 132
+        ];
+
+        public static readonly ImmutableDictionary<string, string> ProductNameMap =
             new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
             {
                 { "VS180", nameof(ViewResources_Product.VirtualSoccer) },
@@ -30,7 +32,7 @@ namespace Fanex.CommonAPI.Application.Helper
                 { "VS2195", nameof(ViewResources_Product.VirtualSoccerEnglishPremier) },
                 { "VS2196", nameof(ViewResources_Product.VirtualSoccerChampionsCup) },
                 { "VS2197", nameof(ViewResources_Product.VirtualSoccerEuroCup) }
-            };
+            }.ToImmutableDictionary();
 
         public static string GetProductName(string productCode, CultureInfo culture)
         {

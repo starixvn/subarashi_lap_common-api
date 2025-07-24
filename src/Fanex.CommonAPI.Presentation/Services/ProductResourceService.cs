@@ -1,7 +1,6 @@
-using System.Collections.Generic;
+using System.Collections;
 using System.Globalization;
 using System.Resources;
-using Fanex.CommonAPI.Application.Services;
 
 namespace Fanex.CommonAPI.Presentation.Services;
 
@@ -27,34 +26,38 @@ public class ProductResourceService : IProductResourceService
 
         return _cacheService.GetOrCreateFromCache(
             cacheKey,
-            () => GetAllProductResources(language),
-            null);
+            () => GetAllProductResources(language));
     }
 
     private Dictionary<string, string> GetAllProductResources(string language)
     {
         var culture = new CultureInfo(language);
         var result = new Dictionary<string, string>(_initialProductMap);
-
         var resourceSet = _resourceManager.GetResourceSet(culture, true, true);
 
-        foreach (System.Collections.DictionaryEntry entry in resourceSet)
+        var productKeys = GetValidProductKeys(resourceSet);
+        foreach (var key in productKeys)
         {
-            var key = entry.Key.ToString();
-            if (key.StartsWith("Product") && key != "Product")
+            var productCode = key.Replace("Product", string.Empty);
+            if (result.ContainsKey(productCode))
             {
-                var productCode = key.Replace("Product", string.Empty);
-                if (!result.ContainsKey(productCode))
-                {
-                    var value = _resourceManager.GetString(key, culture);
-                    if (!string.IsNullOrEmpty(value))
-                    {
-                        result[productCode] = value;
-                    }
-                }
+                continue;
+            }
+
+            var value = _resourceManager.GetString(key, culture);
+            if (!string.IsNullOrEmpty(value))
+            {
+                result[productCode] = value;
             }
         }
 
         return result;
+    }
+
+    private static IEnumerable<string> GetValidProductKeys(ResourceSet resourceSet)
+    {
+        return resourceSet.Cast<DictionaryEntry>()
+            .Select(entry => entry.Key.ToString())
+            .Where(key => key.StartsWith("Product") && key != "Product");
     }
 }

@@ -8,7 +8,6 @@ using Domain.Results;
 using Fanex.CommonAPI.Application.Constants;
 using Fanex.CommonAPI.Application.Helper;
 using Fanex.CommonAPI.Application.Services;
-using Fanex.CommonAPI.Domain.Options;
 using Fanex.Logging;
 using Microsoft.AspNetCore.Hosting;
 using Queries;
@@ -17,7 +16,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Xml.Linq;
-using Microsoft.IdentityModel.Tokens;
 
 public class GetProductAccessHandler(
     ILogger logger,

@@ -19,27 +19,27 @@ public static class DbTestUtils
         switch (mappingData)
         {
             case IEnumerable:
-            {
-                var index = 0;
-                HashSet<string> paramSet = [];
-
-                return x =>
                 {
-                    var paramName = x.ArgAt<string>(0);
+                    var index = 0;
+                    HashSet<string> paramSet = [];
 
-                    if (!paramSet.Add(paramName))
+                    return x =>
                     {
-                        index++;
-                        paramSet.Clear();
-                        paramSet.Add(paramName);
-                    }
+                        var paramName = x.ArgAt<string>(0);
 
-                    var elementMappingData = ((IEnumerable<object>)mappingData).ToArray()[index];
-                    var dictionary = ToDictionary(elementMappingData, columnMapping);
+                        if (!paramSet.Add(paramName))
+                        {
+                            index++;
+                            paramSet.Clear();
+                            paramSet.Add(paramName);
+                        }
 
-                    return dictionary.TryGetValue(paramName, out var value) ? value : string.Empty;
-                };
-            }
+                        var elementMappingData = ((IEnumerable<object>)mappingData).ToArray()[index];
+                        var dictionary = ToDictionary(elementMappingData, columnMapping);
+
+                        return dictionary.TryGetValue(paramName, out var value) ? value : string.Empty;
+                    };
+                }
 
             default:
                 return x =>

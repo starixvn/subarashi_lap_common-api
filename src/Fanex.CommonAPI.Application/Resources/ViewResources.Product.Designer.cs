@@ -133,6 +133,24 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bet Trade.
+        /// </summary>
+        internal static string ProductBT {
+            get {
+                return ResourceManager.GetString("ProductBT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bitcoin.
+        /// </summary>
+        internal static string ProductBTC {
+            get {
+                return ResourceManager.GetString("ProductBTC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exchange.
         /// </summary>
         internal static string ProductBX {
@@ -232,6 +250,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GPI Lottery.
+        /// </summary>
+        internal static string ProductGPILT {
+            get {
+                return ResourceManager.GetString("ProductGPILT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GPI.
         /// </summary>
         internal static string ProductGPIRNG {
@@ -300,6 +327,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         internal static string ProductL22 {
             get {
                 return ResourceManager.GetString("ProductL22", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live Casino.
+        /// </summary>
+        internal static string ProductLC {
+            get {
+                return ResourceManager.GetString("ProductLC", resourceCulture);
             }
         }
         
@@ -412,6 +448,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Playtech Casino.
+        /// </summary>
+        internal static string ProductPTCS {
+            get {
+                return ResourceManager.GetString("ProductPTCS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Playtech Live.
         /// </summary>
         internal static string ProductPTLC {
@@ -453,6 +498,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         internal static string ProductSB {
             get {
                 return ResourceManager.GetString("ProductSB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sportsbook &amp; BA.
+        /// </summary>
+        internal static string ProductSB_BA {
+            get {
+                return ResourceManager.GetString("ProductSB_BA", resourceCulture);
             }
         }
         
@@ -552,6 +606,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         internal static string ProductVB {
             get {
                 return ResourceManager.GetString("ProductVB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Macau.
+        /// </summary>
+        internal static string ProductVG {
+            get {
+                return ResourceManager.GetString("ProductVG", resourceCulture);
             }
         }
         

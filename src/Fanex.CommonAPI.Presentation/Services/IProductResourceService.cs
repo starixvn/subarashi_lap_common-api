@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Fanex.CommonAPI.Presentation.Services;
 
 public interface IProductResourceService

@@ -233,6 +233,9 @@
   <data name="ProductNS" xml:space="preserve">
     <value>Nextspin</value>
   </data>
+  <data name="ProductODG" xml:space="preserve">
+    <value>ODIN GAMING</value>
+  </data>
   <data name="ProductON" xml:space="preserve">
     <value>ON Casino</value>
   </data>

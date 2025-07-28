@@ -403,6 +403,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ODIN GAMING.
+        /// </summary>
+        internal static string ProductODG {
+            get {
+                return ResourceManager.GetString("ProductODG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ON Casino.
         /// </summary>
         internal static string ProductON {

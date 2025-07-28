@@ -89,7 +89,7 @@ public class GetProductAccessHandler(
         return productList;
     }
 
-    public string[] GetAllowedProducts(string functionName = null)
+    private string[] GetAllowedProducts(string functionName = null)
     {
         const string functionAllowedProductsKey = "FunctionAllowedProducts";
         const string FunctionAllowedProductFilePath = "/App_Data/FunctionAllowedProduct.xml";

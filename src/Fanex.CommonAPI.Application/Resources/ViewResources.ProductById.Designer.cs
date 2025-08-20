@@ -682,6 +682,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Smartsoft.
+        /// </summary>
+        internal static string Product_99 {
+            get {
+                return ResourceManager.GetString("Product_99", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Others.
         /// </summary>
         internal static string Product_999 {

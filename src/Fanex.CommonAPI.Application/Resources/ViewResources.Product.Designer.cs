@@ -574,7 +574,7 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Smartsoft .
+        ///   Looks up a localized string similar to Smartsoft.
         /// </summary>
         internal static string ProductSS {
             get {

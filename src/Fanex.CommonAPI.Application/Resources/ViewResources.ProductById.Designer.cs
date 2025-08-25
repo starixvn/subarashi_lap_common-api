@@ -160,6 +160,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OFA Live.
+        /// </summary>
+        internal static string Product_113 {
+            get {
+                return ResourceManager.GetString("Product_113", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Macau.
         /// </summary>
         internal static string Product_12 {

@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Fanex.DepositSettingAPI.WebApi": {
+    "Fanex.CommonAPI.WebApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

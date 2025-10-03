@@ -141,6 +141,9 @@
   <data name="ProductBGG" xml:space="preserve">
     <value>BG</value>
   </data>
+  <data name="ProductBGRNG" xml:space="preserve">
+    <value>BGaming</value>
+  </data>
   <data name="ProductBT" xml:space="preserve">
     <value>Bet Trade</value>
     <comment>#49196</comment>

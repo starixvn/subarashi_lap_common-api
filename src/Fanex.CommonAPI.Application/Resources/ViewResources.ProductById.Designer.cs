@@ -169,6 +169,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BGaming.
+        /// </summary>
+        internal static string Product_114 {
+            get {
+                return ResourceManager.GetString("Product_114", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Macau.
         /// </summary>
         internal static string Product_12 {

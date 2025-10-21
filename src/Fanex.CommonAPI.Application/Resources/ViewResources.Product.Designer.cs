@@ -133,6 +133,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BGaming.
+        /// </summary>
+        internal static string ProductBGRNG {
+            get {
+                return ResourceManager.GetString("ProductBGRNG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bet Trade.
         /// </summary>
         internal static string ProductBT {

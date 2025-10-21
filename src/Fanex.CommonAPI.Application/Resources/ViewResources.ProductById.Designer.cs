@@ -178,6 +178,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GEMINI.
+        /// </summary>
+        internal static string Product_115 {
+            get {
+                return ResourceManager.GetString("Product_115", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Macau.
         /// </summary>
         internal static string Product_12 {

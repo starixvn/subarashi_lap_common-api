@@ -673,6 +673,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vertex Play.
+        /// </summary>
+        internal static string ProductVP {
+            get {
+                return ResourceManager.GetString("ProductVP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Virtual Games.
         /// </summary>
         internal static string ProductVRG {

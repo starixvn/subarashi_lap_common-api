@@ -187,6 +187,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vertex Play.
+        /// </summary>
+        internal static string Product_116 {
+            get {
+                return ResourceManager.GetString("Product_116", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Macau.
         /// </summary>
         internal static string Product_12 {

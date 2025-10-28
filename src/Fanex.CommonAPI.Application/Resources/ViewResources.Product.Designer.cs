@@ -250,6 +250,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GEMINI.
+        /// </summary>
+        internal static string ProductGEM {
+            get {
+                return ResourceManager.GetString("ProductGEM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GPI Live Casino.
         /// </summary>
         internal static string ProductGPILC {

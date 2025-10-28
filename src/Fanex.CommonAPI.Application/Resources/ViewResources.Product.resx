@@ -181,6 +181,9 @@
   <data name="ProductFS" xml:space="preserve">
     <value>FastSpin</value>
   </data>
+  <data name="ProductGEM" xml:space="preserve">
+    <value>GEMINI</value>
+  </data>
   <data name="ProductGPILC" xml:space="preserve">
     <value>GPI Live Casino</value>
   </data>

@@ -350,6 +350,9 @@
   <data name="ProductWM" xml:space="preserve">
     <value>WM</value>
   </data>
+  <data name="ProductWOW" xml:space="preserve">
+    <value>WOW Gaming</value>
+  </data>
   <data name="ProductYB" xml:space="preserve">
     <value>YeeBet</value>
   </data>

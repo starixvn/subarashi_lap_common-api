@@ -745,6 +745,15 @@ namespace Fanex.CommonAPI.Application.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to WOW Gaming.
+        /// </summary>
+        internal static string ProductWOW {
+            get {
+                return ResourceManager.GetString("ProductWOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to YeeBet.
         /// </summary>
         internal static string ProductYB {

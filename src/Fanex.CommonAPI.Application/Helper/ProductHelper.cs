@@ -47,7 +47,9 @@ namespace Fanex.CommonAPI.Application.Helper
                 resourceKey = "Product" + productCode;
             }
 
-            return ViewResources_Product.ResourceManager.GetString(resourceKey, culture) ?? productCode;
+            return ViewResources_Product.ResourceManager.GetString(resourceKey, culture)
+                   ?? ViewResources_Product.ResourceManager.GetString(resourceKey)
+                   ?? productCode;
         }
     }
 }

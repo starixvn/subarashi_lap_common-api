@@ -108,6 +108,34 @@ public class GetProductResourceHandlerTest
     }
 
     [Theory]
+    [InlineData("fr", "VS180")]
+    [InlineData("de", "VS181")]
+    public async Task Handle_ShouldFallbackToDefaultCulture_WhenCultureSpecificResourceNotFound(string language, string productCode)
+    {
+        // Arrange
+        var query = new GetProductResourceQuery { Language = language, ProductCode = productCode };
+        var cacheKey = CacheKeys.ProductResources(query);
+
+        _cacheProvider.GetOrCreateFromCache(
+            cacheKey,
+            Arg.Any<Func<object>>(),
+            Arg.Any<TimeSpan>())
+            .Returns(info =>
+            {
+                var factory = info.Arg<Func<object>>();
+                return factory();
+            });
+
+        // Act
+        var result = await _sut.Handle(query, CancellationToken.None);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        result.Result.Should().BeOfType<string>();
+        result.Result.Should().NotBeNull();
+    }
+
+    [Theory]
     [InlineData("en", "VS180")]
     [InlineData("vi", "VS181")]
     public async Task Handle_ShouldHandleException(string language, string productCode)

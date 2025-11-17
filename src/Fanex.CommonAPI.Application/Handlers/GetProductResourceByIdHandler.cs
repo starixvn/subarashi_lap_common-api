@@ -31,11 +31,14 @@ public class GetProductResourceByIdHandler : BaseHandler<GetProductResourceByIdQ
         return ServiceResult<string>.Success(result);
     }
 
-    private string GetResult(string language, int productId)
+    private static string GetResult(string language, int productId)
     {
         var culture = new CultureInfo(language);
 
-        var value = ViewResources_ProductById.ResourceManager.GetString($"Product_{productId}", culture) ?? string.Empty;
+        var resourceKey = $"Product_{productId}";
+        var value = ViewResources_ProductById.ResourceManager.GetString(resourceKey, culture)
+                   ?? ViewResources_ProductById.ResourceManager.GetString(resourceKey)
+                   ?? string.Empty;
 
         return value;
     }

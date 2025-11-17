@@ -32,43 +32,49 @@ public class GetProductResourceHandler : BaseHandler<GetProductResourceQuery, Se
         return ServiceResult<object>.Success(result);
     }
 
-    private object GetResult(string language, string productCode)
+    private static object GetResult(string language, string productCode)
     {
         var culture = new CultureInfo(language);
 
         if (!string.IsNullOrEmpty(productCode))
         {
-            var value = ViewResources_Product.ResourceManager.GetString(
-                GetResourceKeyByProductCode(productCode), culture) ?? string.Empty;
+            var resourceKey = GetResourceKeyByProductCode(productCode);
+            var value = ViewResources_Product.ResourceManager.GetString(resourceKey, culture)
+                       ?? ViewResources_Product.ResourceManager.GetString(resourceKey)
+                       ?? string.Empty;
 
             return value;
         }
 
-        var resourceSet = ViewResources_Product.ResourceManager.GetResourceSet(culture, true, true);
+        var cultureResourceSet = ViewResources_Product.ResourceManager.GetResourceSet(culture, true, true);
+        var defaultResourceSet = ViewResources_Product.ResourceManager.GetResourceSet(CultureInfo.InvariantCulture, true, true);
         var result = new Dictionary<string, string>();
 
+        PopulateResourceDictionary(defaultResourceSet, result);
+        PopulateResourceDictionary(cultureResourceSet, result);
+
+        return result;
+    }
+
+    private static void PopulateResourceDictionary(System.Resources.ResourceSet resourceSet, Dictionary<string, string> result)
+    {
         foreach (System.Collections.DictionaryEntry entry in resourceSet)
         {
             var key = entry.Key.ToString();
             var productKey = key.Replace("Product", string.Empty);
 
-            if (ProductHelper.ProductNameMap.Any(x => x.Value == productKey))
+            var existingEntry = ProductHelper.ProductNameMap.FirstOrDefault(x => x.Value == productKey);
+            if (!existingEntry.Equals(default(KeyValuePair<string, string>)))
             {
-                productKey = ProductHelper.ProductNameMap.FirstOrDefault(x => x.Value == productKey).Key;
+                productKey = existingEntry.Key;
             }
 
-            if (!result.ContainsKey(productKey))
+            var value = entry.Value?.ToString();
+            if (!string.IsNullOrEmpty(value))
             {
-                var value = ViewResources_Product.ResourceManager.GetString(key, culture);
-
-                if (!string.IsNullOrEmpty(value))
-                {
-                    result[productKey] = value;
-                }
+                result[productKey] = value;
             }
         }
-
-        return result;
     }
 
     private static string GetResourceKeyByProductCode(string productCode) =>

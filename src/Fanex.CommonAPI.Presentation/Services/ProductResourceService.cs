@@ -44,7 +44,8 @@ public class ProductResourceService : IProductResourceService
                 continue;
             }
 
-            var value = _resourceManager.GetString(key, culture);
+            var value = _resourceManager.GetString(key, culture)
+                       ?? _resourceManager.GetString(key);
             if (!string.IsNullOrEmpty(value))
             {
                 result[productCode] = value;
